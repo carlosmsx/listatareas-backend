@@ -6,7 +6,8 @@ import router from './src/routes/tareas.routes';
 
 const app = express();
 
-app.set('port', process.env.PORT || 4000);
+console.log(process.env.REACT_APP__PORT);
+app.set('port', process.env.REACT_APP__PORT || 4001);
 
 app.listen(app.get('port'), ()=>{
     console.log("entramos en el puerto "+app.get('port'));

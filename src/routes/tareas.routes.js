@@ -4,6 +4,7 @@ import validarTarea from '../helpers/validacionTarea';
 
 const router = Router();
 
+console.log("init routes");
 //crear todas las rutas que tienen que ver con los productos
 router.route('/tareas')
 .get(listarTareas)
