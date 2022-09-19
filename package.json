@@ -1,4 +1,17 @@
 {
+  "name": "listatareas-backend",
+  "description": "Practica de backend de lista de tareas",
+  "version": "1.0.0",
+  "main": "index.js",
+  "engines": {
+    "node": "16.x"
+  },
+  "scripts": {
+    "start": "babel-node index.js",
+    "dev": "nodemon --exec babel-node ./index.js"
+  },
+  "author": "Carlos Escobar",
+  "license": "ISC",
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
@@ -9,21 +22,10 @@
     "mongoose": "^6.6.1",
     "morgan": "^1.10.0"
   },
-  "name": "listatareas-backend",
-  "description": "Practica de backend de lista de tareas",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "start": "babel-node index.js",
-    "dev": "nodemon --exec babel-node ./index.js"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/carlosmsx/listatareas-backend.git"
   },
-  "keywords": [],
-  "author": "Carlos Escobar",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/carlosmsx/listatareas-backend/issues"
   },

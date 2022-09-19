@@ -28,6 +28,7 @@ export const crearTarea = async (req,res)=>{
 
 export const listarTareas = async (req,res)=>{
     try {
+        console.log("lista tarea");
         //buscar en la DB la 'collection' de tareas
         const listaTareas = await Tarea.find();
         //enviar la respuesta al frontend

@@ -1,11 +1,10 @@
 import {Router} from 'express';
-import { crearTarea, listarTareas, obtenerTarea, editarTarea, borrarTarea } from '../controllers/tareas.controllers';
+import { listarTareas, crearTarea, obtenerTarea, editarTarea, borrarTarea } from '../controllers/tareas.controllers';
 import validarTarea from '../helpers/validacionTarea';
 
 const router = Router();
 
-console.log("init routes");
-//crear todas las rutas que tienen que ver con los productos
+//crear todas las rutas que tienen que ver con las tareas
 router.route('/tareas')
 .get(listarTareas)
 .post( validarTarea, crearTarea);
