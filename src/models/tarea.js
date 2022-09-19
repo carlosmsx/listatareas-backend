@@ -1,17 +1,20 @@
 import mongoose, {Schema} from 'mongoose';
 
 const tareaSchema = new Schema({
-    nombreTarea: {
+    nombre: {
         type: String,
         required: true,
         minLength: 2,
-        maxLength: 50,
-        unique: true
+        maxLength: 30
+        //unique: true
     },
-    imagen: {
+    descripcion: {
         type: String,
-        required: true        
-    },
+        required: true,
+        minLength: 5,
+        maxLength: 100        
+    }
+    /*
     precio: {
         type: Number,
         required: true,
@@ -22,7 +25,8 @@ const tareaSchema = new Schema({
         type: String,
         required: true,
         maxLength: 40
-    }    
+    } 
+    */   
 });
 
 const Tarea = mongoose.model('tarea', tareaSchema);

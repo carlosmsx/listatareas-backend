@@ -3,12 +3,8 @@ import Tarea from "../models/tarea";
 export const crearTarea = async (req,res)=>{
     try{
         //crear un objeto para guardar en la DB
-        const tareaNueva = new Tarea({
-            nombreTarea: req.body.nombreTarea,
-            imagen: req.body.imagen,
-            precio: req.body.precio,
-            categoria: req.body.categoria
-        }); //const tareaNueva = new Tarea(req.body);
+        const tareaNueva = new Tarea(req.body);
+    
         //guardar efectivamente
         await tareaNueva.save();
         //enviar respuesta al frontend

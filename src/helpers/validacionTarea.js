@@ -2,25 +2,19 @@ import { check } from 'express-validator';
 import resultadosValidacion from './resultadoValidacion';
 
 const validarTarea = [
-    check('nombreTarea')
+    check('nombre')
     .notEmpty()
     .withMessage('El nombre de la tarea es obligaorio')
-    .isLength({min: 2, max: 50})
-    .withMessage('La tarea debe tener entre 2 y 50 caracteres'),
-    check('precio')
+    .isLength({min: 2, max: 30})
+    .withMessage('La tarea debe tener entre 2 y 30 caracteres'),
+    check('descripcion')
     .notEmpty()
-    .withMessage('El precio es un valor obligatorio')
-    .custom((value)=>{
-        if (value>=0 && value<=9999) 
-            return true;
-        else
-            throw new Error('El precio debe estar entre 0 y 9999');
-    }),
+    .withMessage('La descripcion es obligatoria')
+    .isLength({min: 2, max: 100})
+    .withMessage('La descripcion debe tener entre 2 y 100 caracteres'),
     (req,res,next)=>{
         resultadosValidacion(req,res,next);
     }
 ];
 
 export default validarTarea;
-
-//  "nombreTarea": "banana split",
