@@ -14,19 +14,6 @@ const tareaSchema = new Schema({
         minLength: 5,
         maxLength: 100        
     }
-    /*
-    precio: {
-        type: Number,
-        required: true,
-        min: 0,
-        max: 9000
-    },
-    categoria: {
-        type: String,
-        required: true,
-        maxLength: 40
-    } 
-    */   
 });
 
 const Tarea = mongoose.model('tarea', tareaSchema);
